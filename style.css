@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #748194;
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 0 13%; */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    background: rgb(23, 109, 83) 100%;
+}
+
+section {
+    background-color: #FFF;
+    margin-top: 1rem;
+    box-shadow: 10px;
+    border-radius: 0.375rem;
+}
+
+h1 {
+    padding: 18px 12px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input,
+select,
+textarea {
+    padding: 10px 16px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.third-row {
+    display: flex;
+    gap: 5px;
+}
+.third-cols, .fifth-cols {
+    width: 100%;
+}
+select {
+    width: 155%;
+}
+
+.fr-cols,
+.scnd-cols,
+.third-cols,
+.fourth-cols,
+.fifth-cols {
+    float: left;
+    padding: 0 2rem;
+}
+
+
+.second-row,
+.third-row,
+.forth-row,
+.fifth-row,
+.comment-section {
+    clear: left;
+    position: relative;
+}
+
+.sixth-col {
+    padding: 0 2rem;
+}
+
+button {
+    padding: 8px 12px;
+    background:rgb(19, 92, 70);
+    color: #FFF;
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+}

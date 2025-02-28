@@ -15,3 +15,11 @@ export const getLocalStroageItem = <T>(key: string): T | null => {
     return null;
   }
 };
+
+export const removeLocalStorageItem = (key: string) => {
+  try {
+    window.localStorage.removeItem(key);
+  } catch (error) {
+    console.log(error);
+  }
+};

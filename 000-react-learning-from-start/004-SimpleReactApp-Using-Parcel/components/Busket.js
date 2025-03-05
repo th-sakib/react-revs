@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Busket({ appleCount = 0, busketCount = 0 }) {
+function Busket({ appleCount, busketCount }) {
   return (
     <div>
       <h2>{appleCount} apple</h2>
@@ -8,5 +9,15 @@ function Busket({ appleCount = 0, busketCount = 0 }) {
     </div>
   );
 }
+
+Busket.propTypes = {
+  appleCount: PropTypes.number.isRequired,
+  busketCount: PropTypes.number,
+};
+
+// Busket.defaultProps = {
+//   appleCount: 0,
+//   basketCount: 0,
+// };
 
 export default Busket;

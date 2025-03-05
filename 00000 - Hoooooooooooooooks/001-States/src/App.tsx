@@ -6,6 +6,12 @@ import { useState } from "react";
  * if anything changes but can be derived from state should not consider it a state
  */
 
+/**
+ * useState is a hook provided by react to handle states.
+ * This hook returns an array with currentState and a function that change the state.
+ * state change triggers re-renders.
+ */
+
 function App() {
   const [count, setCount] = useState<number>(100);
   return (

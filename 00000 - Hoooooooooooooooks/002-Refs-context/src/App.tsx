@@ -1,9 +1,11 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import DomMenipulationWithlRefs from "./DomMenipulationWithlRefs";
+import ContextExample from "./components/ContextExample/ContextExample";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [path, setPath] = useState(location.pathname);
 
   const countRef = useRef(0);
 
@@ -29,18 +31,47 @@ function App() {
     console.log("ref: ", countRef.current);
   };
 
+  // this is for loading context component when link is clicked
+  const handleLinkClick = (urlName: string) => {
+    history.pushState("", "", urlName);
+    setPath(`/${urlName}`);
+  };
+
   return (
     <>
       <section>
-        <h1>Refs</h1>
+        {path === "/context" ? (
+          <a className="cusor-pointer" onClick={() => handleLinkClick("/")}>
+            Home
+          </a>
+        ) : (
+          <a
+            className="cusor-pointer"
+            onClick={() => handleLinkClick("context")}
+          >
+            Navigate to Context example component
+          </a>
+        )}
+      </section>
 
-        <p>state: {count}</p>
-        <p>ref: {countRef.current}</p>
-        <button onClick={handleIncrement}>increase</button>
-      </section>
-      <section>
-        <DomMenipulationWithlRefs />
-      </section>
+      <div>
+        {path === "/context" ? (
+          <ContextExample />
+        ) : (
+          <>
+            <section>
+              <h1>Refs</h1>
+
+              <p>state: {count}</p>
+              <p>ref: {countRef.current}</p>
+              <button onClick={handleIncrement}>increase</button>
+            </section>
+            <section>
+              <DomMenipulationWithlRefs />
+            </section>
+          </>
+        )}
+      </div>
     </>
   );
 }

@@ -20,7 +20,7 @@ function App() {
    * 1. ref update is synchronous
    * 2. useRef has no argument it returns {current: undefined}
    * 3. In this case it returns {current: 0}
-   * 4. As it is synchronous the console.log()
+   * 4. As it is synchronous the console.log() get update in synchronous with the counterREf.current++ .
    */
 
   const handleIncrement = () => {

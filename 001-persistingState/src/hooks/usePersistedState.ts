@@ -12,7 +12,7 @@ export const usePersistedState = <T>(key: string, initialValue: T) => {
 
   useEffect(() => {
     setLocalStorageItem(key, value);
-  }, [value]);
+  }, [value, key]);
 
   return [value, setValue] as const;
 };

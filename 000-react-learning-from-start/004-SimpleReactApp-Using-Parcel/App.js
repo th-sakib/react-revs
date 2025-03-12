@@ -23,6 +23,14 @@ const App = () => {
     }
   };
 
+  const div = (
+    <div>
+      <h1>asdf</h1>
+      <p>asdfasdf</p>
+    </div>
+  );
+  console.log(div);
+
   return (
     <section>
       <Busket appleCount={leftAppleCount} busketCount={1} />

@@ -1,5 +1,4 @@
 export function render(reactElement, rootElement) {
-  console.log(reactElement);
   function createDomElement(reactElement) {
     if (reactElement && typeof reactElement.type === "function") {
       return createDomElement(reactElement.type(reactElement.props));
@@ -46,7 +45,7 @@ export function render(reactElement, rootElement) {
   }
 
   const DOMElement = createDomElement(reactElement);
-
+  rootElement.innerHTML = "";
   if (Array.isArray(DOMElement)) {
     rootElement.append(...DOMElement);
   } else {

@@ -5,7 +5,7 @@ const REQUIRED_INPUT_FIELDS = 6;
 
 export default function OTPInput() {
   const [inputFields, setInputFields] = useState<string[]>(
-    Array.from({ length: REQUIRED_INPUT_FIELDS }, () => "")
+    Array.from({ length: REQUIRED_INPUT_FIELDS }, () => "") // ["","","","","",""]
   );
 
   const inputRef = useRef<{ [key: number]: HTMLInputElement | null }>({});

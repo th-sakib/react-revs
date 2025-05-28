@@ -134,7 +134,7 @@ function ExpenseForm({
   // };
 
   /** ************ ONE WAY DATABINDING ***********
-   * This means only our code can menipulate data but not the other way.
+   * This means only our code can menipulate dom but not the other way.
    *
    * that's why we have to update the state in every keystroke by using onChange handler
    *
